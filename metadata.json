@@ -1,0 +1,6 @@
+{
+  "name": "Online Age Calculator",
+  "description": "Calculate your exact age in years, months, and days. Free, fast and easy online age calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+
+  /* Prevent zoom on inputs on iOS Safari */
+  input, select, textarea, button {
+    touch-action: manipulation;
+  }
+
+  /* Hide number input spinners on webkit and firefox for clean mobile appearance */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Print Styles for Sarkari Job Eligibility Slip */
+@media print {
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide website UI during print */
+  #adSlotTop,
+  #adSlotBottom,
+  #adSlotResultNative,
+  #ageCalculatorCard,
+  #infoSection,
+  #faqSection,
+  #seoGuideSection,
+  #mainFooter,
+  #mobileStickyBar,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure printable slip fills standard A4 sheet cleanly */
+  #printableEligibilitySlip {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    border: 2px solid #000000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
